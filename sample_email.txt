@@ -1,0 +1,35 @@
+--- FULL EMAIL HEADER ---
+Delivered-To: student@gmail.com
+Return-Path: <bounce@security-update-paypal.com>
+Received: from mail.security-update-paypal.com (unknown [192.168.1.100])
+        by gmail-smtp-in.l.google.com with ESMTPS id abc123
+        for <student@gmail.com>; Mon, 1 Jun 2026 10:30:45 -0700
+Received-SPF: fail (google.com: domain of bounce@security-update-paypal.com does not designate 192.168.1.100 as permitted sender)
+Authentication-Results: mx.google.com;
+       dkim=fail header.i=@security-update-paypal.com;
+       spf=fail (google.com: domain of bounce@security-update-paypal.com does not designate 192.168.1.100 as permitted sender)
+Message-ID: <60b8d2c1.coremail@security-update-paypal.com>
+From: "PayPal Support" <support@security-update-paypal.com>
+To: student@gmail.com
+Subject: Urgent: Verify Your Account Within 24 Hours
+Date: Mon, 1 Jun 2026 17:30:45 +0000
+Reply-To: no-reply@security-update-paypal.com
+
+--- EMAIL BODY ---
+Dear Customer,
+
+We detected unusual activity on your PayPal account. Your account will be suspended within 24 hours unless you verify your identity.
+
+Click here to verify now: http://paypal-security-update.verify-account.com/login
+
+Thank you,
+PayPal Security Team
+
+--- MY ANALYSIS ---
+1. Sender Domain Mismatch: Email from security-update-paypal.com, not official paypal.com domain.
+2. SPF Fail: Received-SPF shows 'fail' - 192.168.1.100 is not authorized to send for this domain.
+3. DKIM Fail: Authentication-Results shows dkim=fail, meaning signature is invalid.
+4. Suspicious URL: Link goes to verify-account.com, not paypal.com. Classic phishing tactic.
+5. Urgency + Threat: "24 hours" and "suspended" used to create panic and force quick action.
+6. IP Address: 192.168.1.100 is a private IP, should not be in public mail servers.
+Conclusion: This email fails multiple authentication checks and uses social engineering. It is a phishing attempt.
